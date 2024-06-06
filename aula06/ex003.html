@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro Javascript</title>
+    <style>
+        body {
+            background-color: rgb(216, 218, 250);
+        }
+        h1 {
+            color: rgb(17, 48, 17);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore quia at doloremque fugit quod quam dolor fuga ratione repudiandae, porro vel molestiae animi quis, reiciendis sequi illum itaque explicabo modi?</p>
+    <script>
+        /*
+        var n1 = Number.parseInt(window.prompt("Digite um primeiro número para somar:"))
+        var n2 = Number.parseInt(window.prompt("Digite um segundo número para somar:"))//retorna strings
+        */
+        var n1 = Number(window.prompt("Digite um primeiro número para somar:"))
+        var n2 = Number(window.prompt("Digite um segundo número para somar:"))
+        var soma = n1 + n2//considera como se ambos fossem strings, concatenando
+        //number + number, string + string
+        //window.alert("A soma dos valores é: " + soma)
+        window.alert(`A Soma entre ${n1} e ${n2} resulta em: ${soma}!!`)//uso das template strings
+    </script>
+</body>
+</html>

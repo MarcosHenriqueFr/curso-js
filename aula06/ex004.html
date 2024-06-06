@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto Javascript</title>
+    <style>
+        body {
+            background-color: rgb(46, 192, 46);
+            font-size: 2.5em;
+        }
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bom dia</h1>
+    <script>
+        var p1 = window.prompt("Digite uma palavra: ")
+        var p2 = window.prompt("Digite outra palavra: ")
+        document.writeln(`<p>A palavra ${p1.toUpperCase()} agora é maiúscula,<br> A palavra ${p2.toLowerCase()} agora é minúscula.<br>  A palavra ${p1} tem ${p1.length} letras</p>`)//nome da string.length, .toUpperCase() necessita de ()
+    </script>
+</body>
+</html>
