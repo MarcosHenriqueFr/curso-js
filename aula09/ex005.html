@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(133, 133, 211);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Iniciando com o DOM</h1>
+    <p>Olá<br>Opa</p>
+    <p name="teste">Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em Js</p>
+    <div id="aviso">
+        Clique em mim
+    </div>
+    <script>
+        // window.document.write('Olá, mundo!'), consigo buscar configurações da página usando o DOM, posso navegar pela árvore dom, pelos seus elementos
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[2]//vetor, usado quando estiver no  plural
+        var p2 = document.getElementById('aviso')
+        var p3 = document.getElementsByClassName('titulo')[0]
+        corpo.style.background = 'Black'
+        p1.style.color = 'Gold'//é tratado como o css inline
+        window.document.writeln('Está escrito assim: ' + p1.innerHTML)
+        document.writeln('<br>Esse é o segundo teste: ' + p2.innerHTML)
+        document.writeln(`<br>Esse é o terceiro: ${p3.innerHTML}`)
+        p3.innerHTML = '<h2>Opa</h2>'
+        // window.alert(p1.innerHTML) aqui ele vem com as tags
+        p1 = document.getElementsByName('teste')[0]
+        document.writeln(`<br>Esse é o quarto: ${p1.innerHTML}`)
+
+        p2 = document.querySelector('div#aviso')
+        document.writeln(`Mais um: ${p2.innerText}`)
+        p2.style.backgroundColor = 'Darkblue'
+        p1.style.fontWeight = 'bold'
+    </script>
+</body>
+</html>
