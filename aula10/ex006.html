@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            color: white;
+            background-color: rgb(10, 80, 80);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"><!--Config do método-->
+        interaja...
+    </div>
+    <script>
+        var a = window.document.querySelector('div#area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', saiu)
+        function clicar() {
+            a.style.backgroundColor = 'Blue'
+            a.innerText = 'Clicou'
+        }
+
+        function entrar() {
+            a.style.backgroundColor = 'Red'
+            a.innerText = 'Entrou!!'
+        }
+        
+        function saiu() {
+            a.style.backgroundColor = 'rgb(10, 80, 80)'
+            a.innerText = 'interaja...'
+        }
+    </script>
+</body>
+</html>

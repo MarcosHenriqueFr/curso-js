@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números 2</title>
+</head>
+<body>
+    <h1>Operações de Soma!!</h1>
+    <input type="number" name="bloco1" id="bloco1"> +
+    <input type="number" name="bloco2" id="bloco2">
+    <input type="button" value="Somar" id="soma">
+    <div id="resultado">Resultado</div>
+
+    <script>
+        var botao = window.document.getElementById('soma')
+        botao.addEventListener('click', somar)//as configurações globais do botão
+
+        function somar() {
+        var n1 = Number(window.document.getElementById('bloco1').value)
+        var n2 = Number(window.document.getElementById('bloco2').value)
+        
+        var res = document.querySelector('div#resultado')
+        var soma = n1 + n2
+        res.innerText = `A soma entre ${n1} + ${n2} resultou em ${soma}`
+        }
+        
+        
+    </script>
+</body>
+</html>
