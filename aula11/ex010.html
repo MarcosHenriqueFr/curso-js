@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste com condições</title>
+</head>
+<body>
+    <h1>Velocidade de um veículo</h1>
+    <p>Insira uma velocidade(KM/H): </p>
+    <input type="number" name="vel" id="vel">
+    <input type="button" value="Verificar" id="botao">
+    <div id="res">
+        
+    </div>
+    <script>
+        var botao = window.document.querySelector('input#botao')
+        botao.addEventListener('click', velocidade)
+
+        function velocidade(){
+            var tn1 = window.document.getElementById('vel')
+            var n1 = Number(tn1.value)
+            var res = window.document.querySelector('div#res')//Encontra a DIV
+
+            res.innerHTML = `<p>Sua velocidade atual é de ${n1}Km/h</p>`
+
+            if (n1 > 60) {
+                res.innerHTML += `<p>Velocidade acima do ideal. MULTADO</p>`//condições simples
+            }
+            
+            res.innerHTML += `<p>Dirija com cuidado</p>`
+        }
+    </script>
+</body>
+</html>
