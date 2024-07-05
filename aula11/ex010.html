@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste com condições</title>
+    <title>Sistema de Multas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Velocidade de um veículo</h1>
@@ -22,10 +27,12 @@
             var n1 = Number(tn1.value)
             var res = window.document.querySelector('div#res')//Encontra a DIV
 
-            res.innerHTML = `<p>Sua velocidade atual é de ${n1}Km/h</p>`
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${n1}Km/h</strong></p>`//para fazer modificações com html
 
             if (n1 > 60) {
                 res.innerHTML += `<p>Velocidade acima do ideal. MULTADO</p>`//condições simples
+            } else {
+                res.innerHTML += `<p>Direção cuidadosa!!</p>`
             }
             
             res.innerHTML += `<p>Dirija com cuidado</p>`
