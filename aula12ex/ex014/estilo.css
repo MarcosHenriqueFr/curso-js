@@ -15,7 +15,6 @@ section {
     max-width: 700px;
     padding: 15px;
     margin: auto;
-    text-align: justify;
     border: 2px solid black;
     border-radius: 15px;
     box-shadow: 6px 3px 10px 0px rgba(0, 0, 0, 0.308);
@@ -23,10 +22,15 @@ section {
 
 section p {
     margin: 50px 0;
+    text-align: center;
+}
+
+div#foto {
+    margin: 0 auto 20px;
+    width: 300px;
 }
 
 footer {
-    background-color: black;
     color: white;
     font-size: 0.7em;
     padding: 10px;
