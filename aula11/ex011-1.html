@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Idade</title>
+    <style>
+                body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body p {
+            font-size: 2em;
+        }
+        div.container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        input#idade {
+            border: 2px solid black;
+            border-radius: 15px;
+            font-size: 1.5em;
+        }
+        input#confirmar {
+            margin: 4px 0 0;
+            padding: 20px;
+            background-color: rgb(255, 251, 191);
+            border: 2px solid black;
+            border-radius: 15px;
+            font: normal 1.5em Arial;
+        }
+        input#confirmar:hover {
+            cursor: pointer;
+            background-color: rgb(243, 210, 159);
+            font: bold 1.5em Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de idade</h1>
+    <div class="container">
+        <input type="number" name="" id="idade">
+        <input type="button" value="Verificar" id="confirmar">
+    </div>
+
+    <div id="res">
+
+    </div>
+    <script>
+        var botao = document.querySelector('input#confirmar')
+        botao.addEventListener('click', idade)
+
+        function idade(){
+            var txt = document.querySelector('input#idade')
+            var idade = Number(txt.value)
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = `<p>Carregando...</p>`
+
+            if (idade >= 18) {
+                res.innerHTML += `<p>Você tem ${idade} anos, e é maior de idade</p>`
+            } else {
+                res.innerHTML += `<p>Você tem ${idade} anos, e é menor de idade</p>`
+            }
+        }
+    </script>
+</body>
+</html>
