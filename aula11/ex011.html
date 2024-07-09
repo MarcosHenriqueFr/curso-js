@@ -57,9 +57,28 @@
         var botao = document.querySelector('input#confirmar')
         botao.addEventListener('click', nacionalidade)
 
+        var fundo = document.createElement('main')
+
+            document.body.appendChild(fundo)
+            fundo.setAttribute('class', 'hidden')
+
+            var fundoescondido = document.getElementsByClassName('hidden')[0]
+
+            fundoescondido.style.display = 'none'
+
+            fundo.style.marginTop = '10px'
+            fundo.style.width = '200px'
+            fundo.style.height = '200px'
+            fundo.style.backgroundColor = 'blue'
+            fundo.style.textAlign = 'center'
+            fundo.style.color = 'white'
+            fundo.innerHTML = `<p>Olá</p>`
+
         function nacionalidade(){
             var nacao = document.querySelector('input#nacao').value
             var res = document.querySelector('div#res')
+
+            fundoescondido.style.display = 'block'
 
             if (nacao.toUpperCase() == 'BR' | nacao.toUpperCase() == 'BRASIL') {//funciona com somente 1, dá para colocar as funções no if
                 res.innerHTML = `<p>Você é <strong>brasileiro</strong>!!</p>`

@@ -47,7 +47,7 @@ function verificaidade() {
                 }
             
         } else {
-            window.alert('[ERRO] Não foi indicado o Gênero')
+            window.alert('[ERRO] Não foi indicado o gênero')
         }
         res.style.textAlign = 'center'
         res.innerHTML = `<p>${genero} de ${idade} anos</p>`
