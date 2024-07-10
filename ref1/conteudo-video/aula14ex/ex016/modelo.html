@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
-    <title>Modelo</title>
+    <title>Mega-Contador</title>
 </head>
 <body>
     <header>
         <h1>
-            Título
+            Contador
         </h1>
     </header>
     <section>
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure odit cumque possimus reiciendis ullam impedit nam dolor itaque fugit sit debitis optio voluptas reprehenderit rerum placeat, aut deleniti ratione.</p>
+        <div id="dados">
+            <p>Início: <input type="number" name="inicio" id="txti"></p>
+            <p>Fim: <input type="number" name="fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, iusto nisi minus consectetur totam quis itaque impedit dolore vitae, neque autem cumque repellat provident corporis enim facere repudiandae ducimus eligendi.</p>
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
