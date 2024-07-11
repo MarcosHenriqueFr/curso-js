@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
-    <title>Modelo</title>
+    <title>Sistema de tabuada</title>
 </head>
 <body>
     <header>
         <h1>
-            Título
+            Tabuada
         </h1>
     </header>
     <section>
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure odit cumque possimus reiciendis ullam impedit nam dolor itaque fugit sit debitis optio voluptas reprehenderit rerum placeat, aut deleniti ratione.</p>
+            <p>Número: <input type="number" name="num" id="txtn"> <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
         </div>
-        <div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, iusto nisi minus consectetur totam quis itaque impedit dolore vitae, neque autem cumque repellat provident corporis enim facere repudiandae ducimus eligendi.</p>
+        <div id="res">
+            <select name="tabuada" id="seltab" size="10">
+                <option value="">Digite um número acima</option>
+            </select>
         </div>
     </section>
     <footer>
