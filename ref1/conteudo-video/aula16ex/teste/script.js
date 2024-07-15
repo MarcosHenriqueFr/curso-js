@@ -24,6 +24,8 @@ var num = Number(txtn.value)
         
         guardaritem(num)//chama a função de guardar item
     }
+    txtn.value = ''
+    txtn.focus()
 }
 
 //função que verifica se tem mais de um número igual na array
@@ -64,6 +66,13 @@ function media () {
 
 //config da função de resultado
 function dados() {
+    var txtn = document.getElementById('txtn')
+
+    if(txtn.value.length == 0) {//impossibilita finalizar a função sem os dados
+        alert('[ERRO] Insira os valores antes de finalizar')
+        return -1
+    }
+
     res.innerHTML = ``//estava modificando o res com a tabela dentro do html
 
     organizar()//já que não vai ser utilizada a array inicial

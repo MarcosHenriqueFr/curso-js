@@ -25,8 +25,12 @@ section p {
     margin: 50px 0;
 }
 
+select#flista {
+    margin-top: 20px;
+    width: 200px;
+}
+
 footer {
-    background-color: black;
     color: white;
     font-size: 0.7em;
     padding: 10px;

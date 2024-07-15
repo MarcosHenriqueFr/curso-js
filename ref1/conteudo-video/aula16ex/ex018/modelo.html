@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
-    <title>Modelo</title>
+    <title>Analisador</title>
 </head>
 <body>
     <header>
         <h1>
-            Título
+            Analisador de Números
         </h1>
     </header>
     <section>
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure odit cumque possimus reiciendis ullam impedit nam dolor itaque fugit sit debitis optio voluptas reprehenderit rerum placeat, aut deleniti ratione.</p>
+            <p>
+                Número (entre 1 e 100): <input type="number" name="fnum" id="fnum">
+                <input type="button" value="Adicionar" onclick="adicionar()"> 
+                <br>
+                <select name="flista" id="flista" size="6">
+
+                </select>
+                <br>
+                <input type="button" value="Finalizar" onclick="finalizar()">
+            </p>
         </div>
-        <div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, iusto nisi minus consectetur totam quis itaque impedit dolore vitae, neque autem cumque repellat provident corporis enim facere repudiandae ducimus eligendi.</p>
+        <div id="res">
+            
         </div>
     </section>
     <footer>
