@@ -6,16 +6,32 @@ function addnum()
 var txtn = document.getElementById('txtn')
 var num = Number(txtn.value)
 
+    var numv = verificar(num)
+
+    if (numv == - 1) {
+        alert('[ERRO] Número inválido ou já adicionado')
+        return -1
+    }
+
     if(txtn.value.length == 0) {
         alert("[ERRO] Valor não foi inserido")
-    } else if (num < 0 | num > 100) {
+    } else if (num <= 0 | num > 100) {
         alert('[ERRO] Valor inserido está fora do escopo')
     } else {
         var item = document.createElement('option')
-        item.text = `Valor ${num} adicionado`
+        item.text += `Valor ${num} adicionado`
         tabela.appendChild(item)
         
         guardaritem(num)//chama a função de guardar item
+    }
+}
+
+//função que verifica se tem mais de um número igual na array
+function verificar (num) {
+    for (var i = 0; i <= banco.length - 1; i++) {
+        if(banco[i] == num) {
+            return -1
+        }
     }
 }
 
@@ -24,9 +40,41 @@ function guardaritem(valor) {
     banco.push(valor)
 }
 
+//função que organiza a array como numbers e a ordena
+function organizar () {
+    banco.sort(function (a, b){return a - b})
+}
+
+//função que faz a soma de todos os elementos da array
+function soma() {
+    var soma = 0
+    for (var i = 0; i <= banco.length - 1; i++) {
+        soma += banco[i]
+    }
+    return soma
+}
+
+//função que faz a média dos elementos
+function media () {
+    var media = soma()
+
+    media /= banco.length
+    return media
+}
+
 //config da função de resultado
 function dados() {
-    res.innerHTML += `<p>${banco}</p>`
+    res.innerHTML = ``//estava modificando o res com a tabela dentro do html
+
+    organizar()//já que não vai ser utilizada a array inicial
+    var somaf = soma()
+    var mediaf = media()
+
+    res.innerHTML += `<p>Ao todo, temos ${banco.length} números cadastrados</p>`
+    res.innerHTML += `<p>O maior valor informado foi: ${banco[banco.length - 1]}</p>`//pega o tamanho do banco e diminui por 1 para achar o último valor sempre
+    res.innerHTML += `<p>O menor valor informado foi: ${banco[0]}</p>`
+    res.innerHTML += `<p>Somando todos os valores resulta em: ${somaf}</p>`
+    res.innerHTML += `<p>A média dos valores digitados é: ${mediaf}</p>`
 }
 
 //config da array que guarda os valores
@@ -44,4 +92,3 @@ var res = document.getElementById('res')
 
 //local da tabela do select
 var tabela = document.getElementById('tabela')
-
