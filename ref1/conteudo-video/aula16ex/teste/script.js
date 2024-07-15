@@ -71,10 +71,10 @@ function dados() {
     var mediaf = media()
 
     res.innerHTML += `<p>Ao todo, temos ${banco.length} números cadastrados</p>`
-    res.innerHTML += `<p>O maior valor informado foi: ${banco[banco.length - 1]}</p>`//pega o tamanho do banco e diminui por 1 para achar o último valor sempre
-    res.innerHTML += `<p>O menor valor informado foi: ${banco[0]}</p>`
-    res.innerHTML += `<p>Somando todos os valores resulta em: ${somaf}</p>`
-    res.innerHTML += `<p>A média dos valores digitados é: ${mediaf}</p>`
+    res.innerHTML += `<p>O maior valor informado foi: ${banco[banco.length - 1].toFixed(2)}</p>`//pega o tamanho do banco e diminui por 1 para achar o último valor sempre
+    res.innerHTML += `<p>O menor valor informado foi: ${banco[0].toFixed(2)}</p>`
+    res.innerHTML += `<p>Somando todos os valores resulta em: ${somaf.toFixed(2)}</p>`
+    res.innerHTML += `<p>A média dos valores digitados é: ${mediaf.toFixed(2)}</p>`//para arrumar as casas decimais
 }
 
 //config da array que guarda os valores
