@@ -1,14 +1,10 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+let idade = window.prompt('Digite a sua idade: ');
+let idade1 = idade;
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+idade = Number(idade);
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
+idade+=1;
+idade1+=1;
 
-/*
-Comentário de várias linhas
-*/
+console.log(idade, typeof idade);
+console.log(idade1, typeof idade1);
