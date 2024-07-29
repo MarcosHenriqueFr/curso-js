@@ -5,7 +5,8 @@ const btnReset = document.getElementById("btnResetar");
 const btnx2 = document.getElementById("btnMulti");
 
 let cont = 0;
-
+// Foi aplicado sem utilizar a identificação pelo event listener e nem diretamente pelo HTML
+// Aplica o método e chama a função logo em seguida.
 btnAumentar.onclick = function(){
     cont++;
     contador.textContent = cont;
