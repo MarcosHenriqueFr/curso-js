@@ -15,7 +15,7 @@ botao.onclick = function(){
         if(pay1.checked) {
             res.innerHTML += `Seu pagamento é por via BISA!`;
         } else if (pay2.checked) {
-            res.innerHTML += `Seu pagamento é por via BasteCard!`;
+            res.innerHTML += `Seu pagamento é por via BasterCard!`;
         } else if (pay3.checked) {
             res.innerHTML += `Seu pagamento é por via DAY PAL!`;
         } else {
