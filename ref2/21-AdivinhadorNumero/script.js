@@ -1,6 +1,6 @@
 //Minha tentativa
-const min = 4;
-const max = 10;
+const min = 1;
+const max = 100;
 const resposta = Math.floor(Math.random() * (max - min + 1)) + min;
 
 let trabalhando = true;

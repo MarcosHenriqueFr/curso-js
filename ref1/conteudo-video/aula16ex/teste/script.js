@@ -24,8 +24,6 @@ var num = Number(txtn.value)
         
         guardaritem(num)//chama a função de guardar item
     }
-    txtn.value = ''
-    txtn.focus()
 }
 
 //função que verifica se tem mais de um número igual na array
