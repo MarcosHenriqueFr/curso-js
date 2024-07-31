@@ -1,7 +1,15 @@
+html {
+    height: 98%;
+}
+
 body {
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     background-color: gainsboro;
+
+    display: flex;
+    align-items: center;
 }
 
 body p {
@@ -10,6 +18,7 @@ body p {
 
 main {
     width: 600px;
+    height: 600px;
     margin: auto;
     border-radius: 10px;
     padding: 10px;
@@ -19,17 +28,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 
 main > label {
-    font-size: 1.8em;
+    text-align: center;
+    font-size: 2.5em;
     color: rgb(32, 83, 178);
     font-weight: bold;
 }
 
-div {
+div#radio {
     display: block;
+}
+
+div#res {
+    font-size: 1.2em;
 }
 
 input#ctext {

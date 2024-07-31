@@ -1,14 +1,29 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+const textBox = document.getElementById("ctext");
+const cfradio = document.getElementById("tempcelf");
+const fcradio = document.getElementById("tempfcel");
+const btn = document.getElementsByTagName("button")[0];
+const res = document.getElementById("res");
+let temp;
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+btn.addEventListener("click", Convert);
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
-
-/*
-Comentário de várias linhas
-*/
+function Convert(){
+    let temp = Number(textBox.value);
+    let tempIni = temp;
+    
+    if(textBox.value === ""){
+        window.alert("Nenhum valor foi inserido");
+    } else {
+        if(cfradio.checked){
+            temp = (temp * 1.8) + 32;
+            temp = temp.toFixed(2);
+            res.innerHTML = `A conversão de <strong>${tempIni}°C</strong> resultou em <strong>${temp}°F</strong>!!`
+        } else if (fcradio.checked){
+            temp = (temp - 32) / 1.8;
+            temp = temp.toFixed(2);
+            res.innerHTML = `A conversão de <strong>${tempIni}°F</strong> resultou em <strong>${temp}°C</strong>!!`
+        } else {
+            window.alert("Nenhuma conversão foi selecionada");
+        }
+    }
+}
