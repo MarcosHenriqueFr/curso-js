@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    background-color: gainsboro;
+}
+
+body p {
+    text-align: justify;
+}
+
+main {
+    width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.479);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+main > label {
+    font-size: 1.8em;
+    color: rgb(32, 83, 178);
+    font-weight: bold;
+}
+
+div {
+    display: block;
+}
+
+input#ctext {
+    height: 30px;
+    font-size: 1em;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5em;
+    color:white;
+    background-color: rgb(224, 14, 14);
+
+    transition: background-color 1s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: brown;
+}
