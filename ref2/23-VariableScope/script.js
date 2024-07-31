@@ -1,14 +1,12 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+//Onde uma variável é reconhecida e acessível, local vs global, a LOCAL tem mais hierarquia que a global
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+let y = 3;
+//Qualquer um tem acesso, não é recomendável em grandes programas, já que pode ocorrer conflitos de nomes.
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
-
-/*
-Comentário de várias linhas
-*/
+function func2(){//elas não tem acesso a outras funções
+    let x = 1;//essa tem o escopo local
+    console.log(x);// x = 1
+}
+function func1(){
+    console.log(x);// x = 3
+}
