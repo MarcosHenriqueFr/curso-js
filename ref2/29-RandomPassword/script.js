@@ -1,14 +1,35 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+function gerarSenha(tamanho, maiuscula, minuscula, numero, simbolo){
+    const charMaiuscula = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const charMinuscula = "abcdefghijklmnopqrstuvwxyz";
+    const charNumero = "1234567890";
+    const charSimbolos = ";/?:><.,^~}{][+=_-|";
+    let CaracteresPermitidos = "";
+    let senha = "";
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
+    maiuscula ? CaracteresPermitidos += charMaiuscula : CaracteresPermitidos;
+    minuscula ? CaracteresPermitidos += charMinuscula : CaracteresPermitidos;
+    numero ? CaracteresPermitidos += charNumero : CaracteresPermitidos;
+    simbolo ? CaracteresPermitidos += charSimbolos : CaracteresPermitidos;
 
-/*
-Comentário de várias linhas
-*/
+    let tamanhoCod = CaracteresPermitidos.length;
+    if(tamanhoCod == ""){
+        return "Não foi selecionado uma característica de senha!";
+    }
+    
+    for(let i = 0; i < tamanho; i++){
+        senha += CaracteresPermitidos.charAt(Math.floor(Math.random() * tamanhoCod));
+    }
+    
+    return senha;
+}
+
+const senhaTamanho = 15;
+const IncluiMaiuscula = false;
+const IncluiMinuscula = false;
+const IncluiNumero = true;
+const IncluiSimbolo = false;
+
+const senha = gerarSenha(senhaTamanho, IncluiMaiuscula, IncluiMinuscula, IncluiNumero, IncluiSimbolo);
+
+console.log(senha);
