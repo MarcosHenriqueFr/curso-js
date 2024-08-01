@@ -13,8 +13,10 @@ function gerarSenha(tamanho, maiuscula, minuscula, numero, simbolo){
     simbolo ? CaracteresPermitidos += charSimbolos : CaracteresPermitidos;
 
     let tamanhoCod = CaracteresPermitidos.length;
-    if(tamanhoCod == ""){
+    if(tamanhoCod === 0){
         return "Não foi selecionado uma característica de senha!";
+    } else if(senhaTamanho <= 0) {
+        return "Não teve tamanho de senha";
     }
     
     for(let i = 0; i < tamanho; i++){
@@ -24,12 +26,12 @@ function gerarSenha(tamanho, maiuscula, minuscula, numero, simbolo){
     return senha;
 }
 
-const senhaTamanho = 15;
+const senhaTamanho = 10;
 const IncluiMaiuscula = false;
 const IncluiMinuscula = false;
-const IncluiNumero = true;
+const IncluiNumero = false;
 const IncluiSimbolo = false;
 
 const senha = gerarSenha(senhaTamanho, IncluiMaiuscula, IncluiMinuscula, IncluiNumero, IncluiSimbolo);
 
-console.log(senha);
+console.log("Senha gerada: "+senha);
