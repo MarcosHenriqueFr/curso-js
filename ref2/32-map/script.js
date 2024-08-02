@@ -1,14 +1,15 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+//map method, é bem parecido com o forEach, só que ele retorna uma nova array
+//armazena tudo em uma nova array
+//o forEach muda os elementos originais
+//As vezes nem vai precisar de indice e array 
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+const numeros = [1, 2, 3, 4, 5];
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
+const quadrados = numeros.map(quadrado);
 
-/*
-Comentário de várias linhas
-*/
+console.log(numeros);
+console.log(...quadrados);
+
+function quadrado(elemento){
+    return elemento **= 2;
+}
