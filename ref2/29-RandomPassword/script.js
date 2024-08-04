@@ -26,14 +26,14 @@ function gerarSenha(tamanho, maiuscula, minuscula, numero, simbolo){
     return senha;
 }
 
-const senhaTamanho = 10;
+const senhaTamanho = 15;
 const IncluiMaiuscula = true;
 const IncluiMinuscula = true;
 const IncluiNumero = true;
-const IncluiSimbolo = true;
+const IncluiSimbolo = false;
 
 const senha = gerarSenha(senhaTamanho, IncluiMaiuscula, IncluiMinuscula, IncluiNumero, IncluiSimbolo);
 
-document.getElementById("meup").innerHTML += "Sua senha: "+senha;
+document.getElementById("meup").innerHTML += `${senha}`;
 
 console.log("Senha gerada: "+senha);
