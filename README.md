@@ -8,4 +8,6 @@
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref1/conteudo-video/aula16ex/teste/modelo">Analisador de Números</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/21-AdivinhadorNumero/">Adivinhador de Número</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/24-TempConversion/">Conversor de temperatura</a>
+    <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/28-DiceRollerProgram/">Gerador de Dados</a>
+    <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/29-RandomPassword/">Gerador de senhas</a>
 </ul>
