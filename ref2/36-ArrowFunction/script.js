@@ -1,14 +1,17 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+//é bem parecido com as funções genéricas, porém é mais conciso e também tem o mesmo propósito
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+//declarações globais
+let nomeCompleto = "João Pessoa";
+let idade = 17;
+let altura = 183;
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
+const ola = () => console.log("Olá");//coloca os parâmetros nos parênteses
+const saudacao = (nome) => console.log(`Seu nome é: ${nome}`);
+//se atentar com erros de input do usuário
+const caracteristicas = (idade, altura) => {
+    console.log(`Você tem ${idade} anos!\nE ${altura}cm de altura`);
+};
 
-/*
-Comentário de várias linhas
-*/
+ola();
+saudacao(nomeCompleto);
+caracteristicas(idade, altura);
