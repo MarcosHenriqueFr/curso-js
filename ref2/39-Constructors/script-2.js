@@ -48,7 +48,7 @@ function programa(){
             }
         } else {
             res.innerHTML = "Você ganhou e matou o monstro!!";
-            return -1;
+            Zumbi.vida = 0;
         }
         
         programa();
