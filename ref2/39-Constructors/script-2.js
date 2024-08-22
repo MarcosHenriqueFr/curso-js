@@ -37,7 +37,10 @@ function programa(){
 
     btnAtacar.onclick = function(){
 
-        if(Zumbi.vida > 0){
+        if(Player.vida <= 0){
+            res.innerHTML = `Você morreu!`;
+            return -1;
+        } else if(Zumbi.vida > 0){
             let probabilidade = Math.round(Math.random());
             if(probabilidade == 0){
                 Zumbi.vida = Player.Atacar();
@@ -58,8 +61,13 @@ function programa(){
         let ValorIni = Player.vida;
         Player.vida = Player.Comer();
 
-        let diferenca = Player.vida - ValorIni;
-        res.innerHTML = `Você comeu e recuperou ${diferenca} de vida`
+        if(Player.vida > 20){
+            res.innerHTML = `Sua vida já está no máximo.`;
+            Player.vida = 20;
+        } else {
+            let diferenca = Player.vida - ValorIni;
+            res.innerHTML = `Você comeu e recuperou ${diferenca} de vida`;
+        }
         programa();
     }
 
