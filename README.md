@@ -11,4 +11,5 @@
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/28-DiceRollerProgram/">Gerador de Dados</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/29-RandomPassword/">Gerador de senhas</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/39-Constructors/">Batalha de turnos</a>
+    <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/53-RelogioDigital/">Relógio Digital</a>
 </ul>
