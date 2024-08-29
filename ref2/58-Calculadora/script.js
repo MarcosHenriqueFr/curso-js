@@ -48,7 +48,7 @@ function ComecarCalculadora(){
         if(calculo.length >= 2){
             Executar();
         }
-            
+
     }
 
     function Executar(){
@@ -142,7 +142,8 @@ function ComecarCalculadora(){
     }
 
     function MostrarNaTela(elemento){
-        elemento.onclick = function(){
+        elemento.onclick = function(){//função logo após apertar o botão
+            
             if(elemento.innerText != "=" || elemento.innerText != "C"){//verificação inicial
                 resultado.innerHTML += elemento.innerText;
             }
@@ -161,7 +162,9 @@ function ComecarCalculadora(){
                 }
             }
         }
-        resultado.innerHTML = "";
+
+        // Não esquecer de limpar o resultado aqui
+        
     }
 
 
