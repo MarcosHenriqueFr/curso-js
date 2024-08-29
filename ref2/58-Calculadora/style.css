@@ -102,6 +102,12 @@ button:hover {
     gap: 10px;
 }
 
+#historico {
+    text-align: center;
+    font-size: 1em;
+    color: grey;
+}
+
 footer {
     width: 100%;
     text-align: center;
