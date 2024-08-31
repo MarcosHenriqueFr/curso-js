@@ -13,4 +13,5 @@
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/39-Constructors/">Batalha de turnos</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/53-RelogioDigital/">Relógio Digital</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/54-StopWatch/">Cronômetro</a>
+    <li><a href="https://marcoshenriquefr.github.io/curso-js/testes/triangulo/">Criador de triângulo retângulo</a>
 </ul>
