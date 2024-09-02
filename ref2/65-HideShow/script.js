@@ -1,14 +1,15 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+const btn = document.getElementById("btn");
+const img = document.getElementById("meuImg");
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+btn.addEventListener("click", (event) => {
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
-
-/*
-Comentário de várias linhas
-*/
+    if(img.style.visibility === "hidden"){
+        img.style.visibility = "visible";
+        //usamos a propriedade de visibility quando queremos reservar um espaço para a img
+        btn.textContent = "Esconder";
+    } else {// só checou a  propriedade do css
+        btn.textContent = "Mostrar"; 
+        img.style.visibility = "hidden";
+    }
+    
+});

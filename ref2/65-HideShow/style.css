@@ -5,3 +5,7 @@ body {
 body p {
     text-align: justify;
 }
+
+#btn {
+    font-size: 2rem;
+}
