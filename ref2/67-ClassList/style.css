@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+body p {
+    text-align: justify;
+}
+
+.btns {
+    font-size: 4rem;
+    margin: 10px;
+    border:none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.aplicado {
+    background-color: hsl(204, 100%, 60%);
+    color: white;
+}
+
+.hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+    font-weight: bold;
+}
+
+.desaplicado {
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
+}
