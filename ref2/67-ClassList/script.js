@@ -18,6 +18,5 @@ botoes.forEach(botao => {
         } else {
            event.target.classList.replace("aplicado", "desaplicado"); 
         }
-        
     });
 });

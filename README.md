@@ -15,4 +15,5 @@
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/54-StopWatch/">Cronômetro</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/testes/triangulo/">Criador de triângulo retângulo</a>
     <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/58-Calculadora/">Calculadora</a>
+    <li><a href="https://marcoshenriquefr.github.io/curso-js/ref2/68-PedraPapelTesoura/">Pedra, papel e tesoura</a>
 </ul>
