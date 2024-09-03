@@ -1,14 +1,44 @@
-//criar interatividade, primeiro seleciona e depois modifica
-document.getElementById("meuh1").textContent = `Opa`;
-document.getElementById("meup").textContent = `Esse é um maravilhoso dia para tomar sol!!`;
+//Pequeno arquivo de texto que é armazenado no computador, usado para lembrar de informações sobre o usuário salvos em pares name=value
 
-console.log("Opa");//aparecem no console do navegador
-console.log('Opa');
-console.log(`Opa`);
+//Posso criar valores para ele, e uma data de expiração
+const primTexto = document.querySelector("#primTexto");
+const ultTexto = document.querySelector("#ultTexto");
+const enviar = document.querySelector("#submit");
+const cokbtn = document.querySelector("#cookiesbtn");
 
-//window.alert(`Esse é um alerta`);
-//window.prompt(`Bom dia`) - caixa de texto
+enviar.addEventListener("click", () => {
+    deletarCookie("primNome");
+    deletarCookie("ultNome");
 
-/*
-Comentário de várias linhas
-*/
+    fazerCookie("primNome", primTexto.value, 30);
+    fazerCookie("ultNome", ultTexto.value, 30);
+});
+
+cokbtn.addEventListener("click", () => {
+    primTexto.value = MostrarCookie("primNome");
+    ultTexto.value = MostrarCookie("ultNome");
+});
+
+function fazerCookie(nome, valor, diasVida){
+    const data = new Date();
+    data.setTime(data.getTime() + (diasVida * 24 * 60 * 60 * 1000));//Calculo pra dias
+    let expirar = "expires=" + data.toUTCString();
+    document.cookie = `${nome}=${valor}; ${expirar}; path=/`;
+}
+
+function deletarCookie(nome){
+    fazerCookie(nome, null, null);
+}
+
+function MostrarCookie(nome){
+    const cDecoded = decodeURIComponent(document.cookie);
+    const cArray = cDecoded.split("; ");
+    let resultado = null;
+
+    cArray.forEach(elemento => {
+        if(elemento.indexOf(nome) === 0){
+            resultado = elemento.substring(nome.length + 1)
+        }
+    })
+    return resultado;
+}
